@@ -1,9 +1,10 @@
 """
-Calculate the monthly repayments of a fixed term loan at a give interest rate based on user inputs.
+Calculate the monthly repayments of a fixed term loan at a given interest rate, based on fixed values and user inputs.
 """
 
 __author__ = "Brian Taylor"
 
+""" Calculate and return a monthly payment amount given the principal, number of months, and annual interest rate. """
 def calc_monthly_payment(principal: int, months: int, annual_rate: float) -> float:
     monthly_payment = ((annual_rate/12) * principal) / (1 - (1 + annual_rate/12) ** (-months))
     return monthly_payment
